@@ -1,8 +1,7 @@
 const express = require('express');
 const router = express.Router();
+const apiController = require('../controllers/api')
 
-router.post('/friends', function (req, res) {
-    console.log(req.body);
-})
+router.post('/friends', apiController.match);
 
 module.exports = router;
