@@ -25,7 +25,8 @@ const connection = mysql.createConnection(
         user: "root",
         password: "password",
         database: "FriendFinder_db"
-    });
+    }
+);
 
 connection.connect(function (err) {
     if (err) throw err;
