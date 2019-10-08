@@ -161,8 +161,8 @@
         <hr>
         <footer class="footer">
             <div class="container">
-                <p><a href="/api/friends">API Friends List</a> | <a
-                        href="https://github.com/afhaque/friendfinder">GitHub Repo</a></p>
+                <p><a href="api/friends">API Friends List</a> | <a
+                        href="https://github.com/Wcarpenter96/FriendFinder">GitHub Repo</a></p>
             </div>
         </footer>
 
@@ -256,12 +256,11 @@
                 };
 
                 // AJAX post the data to the friends API.
-                $.post("/api/friends", userData, function (data) {
+                $.post("/api/match", userData, function (data) {
 
                     // Grab the result from the AJAX post so that the best match's name and photo are displayed.
                     $("#match-name").text(data.friend_name);
-                    $("#match-img").attr("src", data.friend_img);
-
+                    $("#match-img").attr("src", data.friend_img).css("max-width", "300px").css("max-height", "300px");
                     // Show the modal with the best match
                     $("#results-modal").modal("toggle");
 

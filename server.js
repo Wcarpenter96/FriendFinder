@@ -6,8 +6,8 @@ const routes = require('./routes');
 
 // Sets up the Express App
 // =============================================================
-var app = express();
-var PORT = process.env.PORT || 1111;
+const app = express();
+const PORT = process.env.PORT || 1111;
 
 // Sets up the Express app to handle data parsing
 app.use(express.urlencoded({ extended: true }));
@@ -17,7 +17,7 @@ app.use(routes);
 // Starts the server to begin listening
 // =============================================================
 
-var connection = mysql.createConnection({
+const connection = mysql.createConnection({
     host: "localhost",
     port: process.env.PORT || 1111,
     user: "root",
