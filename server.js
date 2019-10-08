@@ -17,22 +17,22 @@ app.use(routes);
 // Starts the server to begin listening
 // =============================================================
 
-const connection = mysql.createConnection(
-    process.env.JAWSDB_URL ||
-    {
-        host: "localhost",
-        port: process.env.PORT || 1111,
-        user: "root",
-        password: "password",
-        database: "FriendFinder_db"
-    }
-);
+// const connection = mysql.createConnection(
+//     process.env.JAWSDB_URL ||
+//     {
+//         host: "localhost",
+//         port: process.env.PORT || 1111,
+//         user: "root",
+//         password: "password",
+//         database: "FriendFinder_db"
+//     }
+// );
 
-connection.connect(function (err) {
-    if (err) throw err;
-    console.log("connected as id " + connection.threadId + "\n");
+// connection.connect(function (err) {
+//     if (err) throw err;
+//     console.log("connected as id " + connection.threadId + "\n");
 
-});
+// });
 
 app.listen(PORT, function () {
     console.log("App listening on PORT " + PORT);
